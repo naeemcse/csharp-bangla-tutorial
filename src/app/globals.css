@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -30,7 +32,7 @@
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
+    --primary: 300 100% 25%;
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
@@ -84,5 +86,72 @@
   }
   body {
     @apply bg-background text-foreground;
+    
   }
+ 
+}
+/* Common Style for whole website  */
+
+::selection {
+  @apply text-primary;
+}
+
+/* Typography using tailwind plagin */
+
+
+
+
+
+.noto-serif-bengali-200 {
+  font-family: "Noto Serif Bengali", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* styles for typography this are example of shadcn ui . So i set it globallu in globals.css */
+h1 {
+  @apply scroll-m-20 text-2xl md:text-3xl font-extrabold tracking-tight lg:text-4xl;
+}
+
+p {
+  @apply leading-7 [&:not(:first-child)]:mt-6;
+}
+
+h2 {
+  @apply mt-10 scroll-m-20 border-b pb-2 text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight transition-colors first:mt-0;
+}
+
+a {
+  @apply font-medium no-underline hover:text-primary;
+}
+
+blockquote {
+  @apply mt-6 border-l-2 pl-6 italic;
+}
+
+h3 {
+  @apply mt-8 scroll-m-20 text-xl md:text-sm font-semibold tracking-tight;
+}
+/*
+ul {
+  @apply my-6 ml-6 list-disc [&>li]:mt-2;
+
+}*/
+li {
+  /* Add specific styles for list items if needed */
+
+}
+table {
+  @apply my-6 w-full;
+}
+
+th {
+  @apply m-0 border-t p-0 ;
+}
+
+td {
+  @apply border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
 }
