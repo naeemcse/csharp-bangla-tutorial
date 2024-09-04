@@ -59,7 +59,12 @@ const config: Config = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		}
+  		},fontFamily: {
+			sans: ['var(--font-inter)'],
+			mono: ['var(--font-roboto-mono)'],
+			sutonnyOMJ: ['var(--font-sutonnyOMJ)'],
+			solaimanlipi: ['var(--font-solaimanlipi)']
+		  },
   	}
   },
   plugins: [require("tailwindcss-animate"),require('@tailwindcss/typography'),],

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import MasterLayout from "@/components/master/layout/MasterLayout";
+import { ThemeProvider } from "@/components/master/Theme-provider"
+import { solaimanlipi, sutonnyOMJ} from "../../public/font/font";
 
-const inter = Inter({ subsets: ["latin"] });
+
+
 
 export const metadata: Metadata = {
   title: "বাংলায় শিখুন সি# ",
@@ -16,11 +18,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={`${solaimanlipi.className} ${sutonnyOMJ.variable} `}>
+      <body>
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
         <MasterLayout> 
         {children}
         </MasterLayout>
+        </ThemeProvider>
         </body>
     </html>
   );

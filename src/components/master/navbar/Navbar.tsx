@@ -5,6 +5,7 @@ import  {Github}  from 'lucide-react';
 
 import { navItems } from "@/assets/data/backBone";
 import SideBar from "../sidebar/SideBar";
+import { ModeToggle } from "../ModeToggle";
 const Navbar = () => {
  
   return (
@@ -48,8 +49,8 @@ const Navbar = () => {
         <div className="flex gap-2">
           <Link className="mt-2 hover:text-primary" href="/github">
           <Github />
-     
           </Link> 
+          <ModeToggle />
           <SideBar />
         </div>
       </div>
