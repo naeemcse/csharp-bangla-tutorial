@@ -21,7 +21,7 @@ const page = () => {
 
         <p className="">পান্ডুলিপি সাব্রিনা</p>
 
-        <p className="">solaimanlipi সলাইমান লিপি ট</p>
+    
   
     </>
   );
