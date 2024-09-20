@@ -2,35 +2,45 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+
+First, clone the repository:
+
+```bash
+git clone https://github.com/naeemcse/csharp-bangla-tutorial.git
+````
+Then, install the dependencies:
+
+```bash
+npm install
+```
+
+run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## বিস্তারিত বর্ণনা
+pages নামক ফোল্ডারে পেজ গুলো থাকবে। প্রতিটা পেজ এর নাম হবে একই নামের ফাইল নামে। যেমন, about.md বা about.mdx  নামে ফাইল থাকলে এই পেজের লিংক হবে http://localhost:3000/docs/about
+আবার ফোল্ডার তৈরি করে রাখলে সেটা একটা path ও তৈরী করবে । যেমনঃ about/index.md বা about/index.mdx নামে ফাইল থাকলে এই পেজের লিংক হবে http://localhost:3000/docs/about 
+এবং এই পেজের কন্টেন্ট গুলো একটা সাইডবারে দেখানো হবে। এই সাইডবারে পেজ গুলোর লিংক দেখানো হবে।
+এবং পেজ গুলোর মধ্যে লিংক দেওয়া থাকবে।
+এই ফোল্ডারে একাধিক md ফাইল থাকলে সেগুলো সাইডবারে দেখানো হবে ও পেজ গুলোর মধ্যে লিংক দেওয়া হবে ও নতুন path তৈরি করা হবে।
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## অন্যান্য   বিস্তারিত বর্ণনা
+যেকোন পেইজ বা পাথ বা কম্পনেন্ট এ নিম্নের মত কোড ব্যবহার করা যাবে। এটা একটা সাধারণ কম্পনেন্ট যা একটা মার্কডাউন স্ট্রিং কে প্রিভিউ করে।
+```jsx
+import  MdPreview from  "@/components/shared/MdPreview";
 
-## Learn More
+export default function MarkdownPage( ) {
+    const source =' # Hello, *world*!';
+    return (
+        <div>
+            <h1>Markdown Preview</h1>
+            <MdPreview source={source} />
+        </div>
+    );
+}
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```

@@ -3,7 +3,7 @@
 import React from 'react';
 import {markdownToHtml} from "@/lib/markdown";
 // import "../loop/style.css";
-
+import MdPreview from "@/components/shared/MdPreview"
 
 async function getMarkdownContent() {
     const markdownContent = '# OOP\n' +
@@ -684,7 +684,9 @@ export default async function Page() {
     const contentHtml = await getMarkdownContent();
 
     // return <div dangerouslySetInnerHTML={{ __html: contentHtml }} />;
-  return ( <>
+  return (
+      <>
+          <MdPreview/>
         <article id="d7dc04a9-aa9d-46c5-b38d-33d40753e142" className="page sans">
             <header>
                 <h1 className="page-title">OOP </h1>
