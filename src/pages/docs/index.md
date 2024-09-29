@@ -1,8 +1,4 @@
-import MdPreview from "@/components/shared/MdPreview";
-import Image from "next/image";
-export default function Home() {
-    const md = `
-    
+
 **সি# হলো একটি প্রোগ্রামিং ভাষা, যা ২০০০ সালে মাইক্রোসফট তৈরি করেছে.**    
 
 বর্তমানে, ওয়েব, মোবাইল এবং ডেস্কটপ, গেম ডেভোলাপমেন্ট সহ বিভিন্ন ধরনের অ্যাপ্লিকেশন তৈরিতে সি# ব্যাপকভাবে ব্যবহৃত হয় । সি# একটি পিউর অব্জেক্ট ওরিয়েন্টেড ও উচ্চস্তরের ভাষা। যা খুবই সহজ ও বোধগম্য । 
@@ -62,12 +58,4 @@ export default function Home() {
 
 - **সি#** হল একটি প্রোগ্রামিং ভাষা।
 - **.NET** হল একটি প্ল্যাটফর্ম যা .NET Framework এবং .NET 5+ অন্তর্ভুক্ত করে।
-- **.NET Core** হল একটি ক্রস-প্ল্যাটফর্ম, উচ্চ-প্রদর্শন ফ্রেমওয়ার্ক যা .NET প্ল্যাটফর্মের অংশ।`
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-        <Image src={"/images/c-sharp.webp"} alt={"c#"} width={400} height={300} className="w-full md:mx-2" />
-        <MdPreview source={md} />
-
-    </main>
-  );
-}
+- **.NET Core** হল একটি ক্রস-প্ল্যাটফর্ম, উচ্চ-প্রদর্শন ফ্রেমওয়ার্ক যা .NET প্ল্যাটফর্মের অংশ।

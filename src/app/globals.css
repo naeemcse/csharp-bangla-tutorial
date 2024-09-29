@@ -157,3 +157,12 @@ td {
   font-family: 'SolaimanLipi';
 }
 
+/* Custom css for nextra theme */
+.nextra-content{
+  @apply text-justify
+}
+
+/* Custom Scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+}*/
