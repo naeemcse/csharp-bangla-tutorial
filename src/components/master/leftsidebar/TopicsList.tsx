@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
@@ -65,23 +66,36 @@ const List = () => {
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1" className="">
-        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionTrigger>  <Link href="/tutorial" >Tutorials </Link>  </AccordionTrigger>
         <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
+            <ul className="list-none pl-4">
+                <li>
+                    <Link href="/docs">C#</Link>
+                </li>
+                <li>
+                    <Link href="/docs">Asp.Net Core</Link>
+                </li>
+                <li>
+                    <Link href="/tutorial/dotnet">.NET</Link>
+                </li>
+                <li>
+                    <Link href="/tutorial/dotnet-core">.NET Core</Link>
+                </li>
+            </ul>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger>Is it styled?</AccordionTrigger>
+        <AccordionItem value="item-2">
+        <AccordionTrigger> Blogs </AccordionTrigger>
         <AccordionContent>
-          Yes. It comes with default styles that matches the other
-          components&apos; aesthetic.
+          c# blogs
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger>Is it animated?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It&apos;s animated by default, but you can disable it if you
-          prefer.
+        <AccordionTrigger>Resourse </AccordionTrigger>
+        <AccordionContent className={"flex flex-col"}>
+         <Link href={"https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/overview"} target="_blank" > Microsoft  </Link>
+            <Link href={"https://www.tutorialspoint.com/csharp/index.htm"} target="_blank" > Tutorialspoint  </Link>
+            <Link href={"https://www.w3schools.com/cs/index.php"} target="_blank" > W3School  </Link>
         </AccordionContent>
       </AccordionItem>
     </Accordion>
